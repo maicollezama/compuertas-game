@@ -1,9 +1,11 @@
 
+import MainMenu from "@/components/MainMenu";
 import LogicGateGame from "@/components/LogicGateGame";
 
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col items-center p-4 sm:p-6 bg-gradient-to-b from-gray-800 to-gray-950">
+      <MainMenu />
       <h1 className="text-4xl sm:text-5xl font-bold mb-4 mt-8 text-center">
         <span className="text-purple-400">Logic Gate</span> 
         <span className="text-white"> Challenge</span>
