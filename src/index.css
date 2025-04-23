@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -98,4 +99,53 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Game animations */
+@keyframes gate-hit {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes gate-fall {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes gate-pulse {
+  0% {
+    filter: drop-shadow(0 0 5px rgba(155, 135, 245, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(155, 135, 245, 0.8));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgba(155, 135, 245, 0.5));
+  }
+}
+
+.gate-hit {
+  animation: gate-hit 0.5s forwards;
+}
+
+.gate-falling {
+  animation: gate-fall 0.5s forwards;
+}
+
+.gate-pulse {
+  animation: gate-pulse 1.5s infinite;
 }
